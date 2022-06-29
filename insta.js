@@ -11,7 +11,7 @@ require("dotenv").config();
   await page.click("._1XyCr  > button");
 
   //login
-  await page.type("[name=username]", "j.stonskadev@gmail.com", { delay: 100 });
+  await page.type("[name=username]", process.env.INSTA_USER, { delay: 100 });
   await page.type("[name=password]", process.env.INSTA_PASS, { delay: 100 });
   await page.click("button[type=submit]");
 
