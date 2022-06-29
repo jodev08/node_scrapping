@@ -15,5 +15,12 @@ require("dotenv").config();
   await page.type("[name=password]", process.env.INSTA_PASS, { delay: 100 });
   await page.click("button[type=submit]");
 
+  //accueil page
+  await page.waitForSelector(".cmbtv > button", { visible: true });
+  await page.click(".cmbtv > button");
+
+  await page.waitForSelector("._a9-z > button", { visible: true });
+  await page.click("._a9-z > button");
+
   //await browser.close();
 })();
